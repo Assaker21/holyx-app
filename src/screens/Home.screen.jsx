@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import {Text, View} from 'react-native';
-import {Card, FAB} from 'react-native-paper';
+import {Button, Card, FAB} from 'react-native-paper';
 import {useDevice} from '../contexts/device.context';
 import {formatDateTime, getNextTime} from '../utils/time';
 
@@ -28,6 +28,7 @@ export default function HomeScreen() {
           ? formatDateTime(getNextTime(device?.data?.provider?.schedule))
           : 'never'}
       </Text>
+      <Button>Sync now</Button>
       {device?.data?.provider ? (
         <Card style={{width: 200, overflow: 'hidden'}}>
           <Card.Cover

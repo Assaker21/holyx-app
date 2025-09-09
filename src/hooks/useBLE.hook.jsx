@@ -1,11 +1,10 @@
-import {useEffect, useState, useRef, useCallback} from 'react';
+import {Buffer} from 'buffer';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {PermissionsAndroid, Platform} from 'react-native';
 import {BleManager, ScanMode} from 'react-native-ble-plx';
 import * as Crypto from '../utils/crypto.js';
-import {Buffer} from 'buffer';
-import useSecureStore from './useSecureStore.hook';
 import useGetImage from './useGetImage.hook';
-import {getNextTime} from '../utils/time.js';
+import useSecureStore from './useSecureStore.hook';
 
 export const BleStage = {
   idle: 'idle',

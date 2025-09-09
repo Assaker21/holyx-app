@@ -64,6 +64,8 @@ export const DeviceProvider = ({children}) => {
         return;
       }
 
+      console.log('Device id: ', deviceId);
+
       const response = await axios.get(
         'https://holyx-api.onrender.com/devices/' + deviceId,
       );
